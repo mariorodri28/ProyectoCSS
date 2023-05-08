@@ -1,0 +1,163 @@
+<html>
+<link rel="stylesheet" href="projectCSS.css">
+
+<head>
+  <title>ProyectoCSS</title>
+
+</head>
+
+<body>
+  <header>
+    <title>Project Css</title>
+    <h1>TodoBuceo</h1>
+
+    <div class="menu">
+      <form>
+        <input type="text" placeholder="Buscar..." id="Buscar" class="required" name="Campo">
+        <button type="reset" onclick="validarCampos(event)">Buscar</button>
+      </form>
+
+      <form>
+        <input type="text" placeholder="Nombre de usuario" class="required" name="Campo">
+        <input type="password" placeholder="Password" class="required" name="Campo">
+        <button type="reset" onclick="validarCampos(event)">Iniciar sesion</button>
+      </form>
+      <ul class="menu2">
+        <li><button type="submit" name="section" value="home">Inicio</button></li>
+        <li><button type="submit" name="section" value="about">Acerca de</button></li>
+        <li><button name="section" value="services" onClick="showEmergency(true)">Servicios</button></li>
+        <li><button type="submit" name="section" value="contact">Contacto</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="emergent hidden" id="emergent">
+    Selecciona las inmersiones que quieres contratar: <br><br>
+    <select name="inmersiones" id="inmersiones" onchange="actualizarDatos()" class="letrasTextArea">
+
+      <option value="La Herradura" data-precio="25">La Herradura 25$</option>
+      <option value="La Herradura Nocturna" data-precio="35">La Herradura Nocturna 35$</option>
+      <option value="El Arrecife" data-precio="40">El Arrecife 40$</option>
+      <option value="El Pecio" data-precio="50">El Pecio 50$</option>
+    </select>
+    <br><br>
+    <label for="inmersionesSeleccionadas">Inmersiones seleccionadas:
+      <br><br>
+      <textarea name="inmersionesSeleccionadas" id="inmersionesSeleccionadas" rows="4" cols="50"
+        class="letrasTextArea"></textarea>
+    </label>
+    <br><br>
+    <label for="precio">Precio Total:
+      <br><br>
+      <input type="text" name="precio" id="precioTotal" class="letrasTextArea">
+    </label>
+    <br><br>
+    <button onclick="guardarSeleccion(); showEmergency(false)">Guardar</button>
+
+    <button onclick="showEmergency(false)" id="closeEmergentButton" class="closeEmergentButton">X</button>
+  </div>
+
+  <div class="main-container">
+
+    <div class="left-container">
+      <video height="200" width="350" autoplay loop muted>
+        <source src="Oceano.mp4">
+      </video>
+      <p></p>
+      Inmersiones mas famosas:
+      <ul>
+        <li><a class="enlace" href="https://www.google.com/">Cueva del Lluc</a></li>
+        <li><a class="enlace" href="https://www.google.com">Paseo San Rafael</a></li>
+        <li><a class="enlace" href="https://www.google.com">Isla del Aire</a></li>
+        <li><a class="enlace" href="https://www.google.com">Cueva de los Angeles</a></li>
+        <li><a class="enlace" href="https://www.google.com">Rascafria</a></li>
+        <li><a class="enlace" href="https://www.google.com">La herradura</a></li>
+        <br>
+        <h2>Contacto</h2>
+        <form>
+          <input type="email" placeholder="Email" name="Campo" required>
+          <p></p>
+          <input type="number" placeholder="Telefono" name="Campo" required>
+          <p></p>
+          <input type="reset" value="Contactar" onclick="">
+        </form>
+
+      </ul>
+    </div>
+
+    <div class="center-container">
+      <h1>Últimas noticias sobre buceo técnico</h1>
+      <div class="news-item">
+        <h2 class="news-title">Nuevos equipos de buceo disponibles en nuestro centro</h2>
+        <p class="news-text">Acabamos de recibir una gran cantidad de equipos de buceo de alta calidad para todos los
+          niveles. Ven a visitarnos y descubre las últimas novedades en material de buceo.</p>
+      </div>
+      <div class="news-item">
+        <h2 class="news-title">Curso intensivo de buceo técnico en julio</h2>
+        <p class="news-text">¿Quieres aprender a bucear de manera más avanzada? ¡Te esperamos en nuestro curso intensivo
+          de buceo técnico en julio! Aprenderás las técnicas más avanzadas y podrás bucear en las mejores inmersiones de
+          España.</p>
+      </div>
+      <div class="news-item">
+        <h2 class="news-title">Descubre los secretos del Mediterráneo con nuestro guía</h2>
+        <p class="news-text">Nuestro guía experimentado te llevará a descubrir los mejores puntos de buceo en el
+          Mediterráneo. Conoce los secretos de los fondos marinos y haz inmersiones inolvidables en los mejores
+          arrecifes de España.</p>
+      </div>
+      <div class="news-item">
+        <h2 class="news-title">Viaja con nosotros a las Islas Canarias</h2>
+        <p class="news-text">Te esperamos en una aventura inolvidable en las Islas Canarias. Haz inmersiones en los
+          mejores puntos de buceo de la zona y descubre la rica vida marina de la región. ¡No te pierdas esta
+          oportunidad!</p>
+      </div>
+      <div class="news-item">
+        <h2 class="news-title">Nuevo centro de buceo en Barcelona</h2>
+        <p class="news-text">Acabamos de abrir un nuevo centro de buceo en el corazón de Barcelona. Ven a visitarnos y
+          descubre las últimas novedades en material y cursos de buceo. ¡Te esperamos!</p>
+      </div>
+    </div>
+
+    <div class="right-container">
+      <h2>¿Donde Estamos?</h2>
+      <a class="enlace" href="https://www.google.es/maps"><img src="d.jpg" width="250px" height="250px"></a>
+      <br><br><br>
+      <video height="200" width="260" autoplay controls muted>
+        <source src="Buceo Almuñécar.mp4">
+      </video>
+      <br><br><br>
+
+      <div class="carroCompra">
+        <img class="imagen" src="carrito.png">
+
+        <br><br><br><br>
+
+        <form>
+          <br>
+          <textarea name="inmersionesSeleccionadas" id="inmersionesPago" rows="5" cols="25"
+            class="letrasTextArea"></textarea>
+          <br><br>
+          <br>
+          <input type="text" name="precio" id="precioTotalPago" class="letrasTextArea">
+          <br><br>
+          <input type="reset" value="PAGAR">
+        </form>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="bottom-container">
+    <img src="c.jpeg">
+  </div>
+
+  <footer>
+    <p>Contacto: todobuceo@gmail.com</p>
+    <p>Datos personales: 123 Main Street, Anytown, Spain</p>
+  </footer>
+  <script src="JsProject.js"></script>
+
+</body>
+
+</html>
