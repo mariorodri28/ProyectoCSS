@@ -18,8 +18,8 @@
       </form>
 
       <form>
-        <input type="text" placeholder="Nombre de usuario" class="required" name="Campo">
-        <input type="password" placeholder="Password" class="required" name="Campo">
+        <input type="text" placeholder="Nombre de usuario" name="Campo" class="required">
+        <input type="password" placeholder="Password" name="Campo" class="required">
         <button type="reset" onclick="validarCampos(event)">Iniciar sesion</button>
       </form>
       <ul class="menu2">
@@ -75,11 +75,11 @@
         <br>
         <h2>Contacto</h2>
         <form>
-          <input type="email" placeholder="Email" name="Campo" required>
+          <input type="email" placeholder="Email" name="Campo" class="required" onblur="validarEmail(event)">
           <p></p>
-          <input type="number" placeholder="Telefono" name="Campo" required>
+          <input type="number" placeholder="Telefono" name="Campo" class="required">
           <p></p>
-          <input type="reset" value="Contactar" onclick="">
+          <input type="reset" value="Contactar" onclick="validarCampos(event)">
         </form>
 
       </ul>

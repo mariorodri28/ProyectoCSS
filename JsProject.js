@@ -24,6 +24,14 @@ function validarCampos(event) {
   });
 
 }
+function validarEmail(event) {
+  const input = event.target;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (!emailRegex.test(input.value)) {
+    alert("El email ingresado no es válido. Verifique que tenga formato usuario@dominio.com");
+  }
+}
 
 
 function showEmergency(show) {
