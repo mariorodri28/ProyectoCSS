@@ -81,6 +81,23 @@ function guardarSeleccion(){
 
 }
 
+const navItems = document.querySelectorAll('nav li:not(:nth-child(3))');
+
+navItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    navItems.forEach(item => {
+      item.style.opacity = '0';
+      item.style.pointerEvents = 'none';
+    });
+  });
+
+  item.addEventListener('mouseleave', () => {
+    navItems.forEach(item => {
+      item.style.opacity = '1';
+      item.style.pointerEvents = 'auto';
+    });
+  });
+});
 
 
 

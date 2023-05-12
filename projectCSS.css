@@ -211,3 +211,23 @@
      .letrasTextArea{
         font-size: large;
      }
+
+     nav ul {
+        list-style: none;
+        display: flex;
+      }
+      
+      nav li {
+        margin-right: 20px;
+      }
+      
+      nav a {
+        text-decoration: none;
+        color: black;
+      }
+      
+      nav li:not(:nth-child(3)):hover {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
